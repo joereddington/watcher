@@ -20,6 +20,7 @@ while True:
         print "Gentle alert: {} {}".format(human_time(last_mod_time),human_time(this_mod_time))
         playsound('airbubble.wav') 
     time.sleep(60)
+    this_mod_time = os.path.getmtime(path)
     if this_mod_time == last_mod_time:
         print "No changes, bastard!" 
         playsound('sonicdrowing_01.wav') 
